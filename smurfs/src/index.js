@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import "./index.css";
 import App from "./components/App";
+import { smurfReducer } from './reducers/smurfReducer'
 
 // Global state will be store in redux store, initial state will live in smurfReducer
 /* State will have the following shape:
@@ -23,4 +26,10 @@ import App from "./components/App";
 // Smurf get request will live in hompage component
 // addSmurf post request will live in form component
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const store = createStore(smurfReducer)
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+document.getElementById("root"));
