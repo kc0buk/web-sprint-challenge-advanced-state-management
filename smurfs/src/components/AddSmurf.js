@@ -11,7 +11,7 @@ const initialFormValues = {
 }
 
 const AddSmurf = () => {
-    const [values, handleChanges] = useForm(initialFormValues)
+    const [values, handleChanges, resetForm] = useForm(initialFormValues)
     const dispatch = useDispatch()
 
     const postNewSmurf = newSmurf => {
@@ -41,6 +41,7 @@ const AddSmurf = () => {
             height: values.height.trim()
         }
         postNewSmurf(newSmurf)
+        resetForm()
     }
 
     return (
