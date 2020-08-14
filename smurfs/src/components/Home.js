@@ -1,11 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import AddSmurf from './AddSmurf'
 
 const Home = () => {
     const smurfs = useSelector(state => state.smurfs)
     console.log(smurfs)
     return (
         <section>
+            <AddSmurf />
             <h3>The Smurf Village</h3>
             {
                 smurfs.map( smurf => 
