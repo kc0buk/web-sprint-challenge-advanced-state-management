@@ -45,6 +45,7 @@ const AddSmurf = () => {
     }
 
     return (
+        <section className='addSmurfForm'>
         <form onSubmit={handleSubmit}>
             <h5>Add New Smurf</h5>
             <label>
@@ -76,6 +77,7 @@ const AddSmurf = () => {
                 <button>Add Smurf</button>
             </label>
         </form>
+        </section>
     )
 }
 
