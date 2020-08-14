@@ -24,10 +24,24 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What problem does the context API help solve?
+
+  The context API helps solve the problem of needing to pass props down from parent to child through every layer of an application, especially when some layers of an application are not even utilizing the props that are being passed through them. The context API allows a component to access props directly, when needed.
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+  The Redux store is the only object that holds all global state data for the application, By passing data from the UI, to actions (which dispatch the appropriate sequence of events to the reducer), to the reducer (which creates a new instance of state and mutates state as necessary, before setting state again), to the store, and finally back to the UI, data always flows in one direction, ensuring the data in state is always accurate.  
+
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+  Application state is generally global variables that may be needed throughout an application and thus, are generally stored at the highest level of an application, or is a separate object like the Redux store. Component state is data that is only needed by one component, and thus stored along with that component. These are generally things like initial form states, or boolean values. 
+
 4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+  Redux-thunk allows the developer to change the normally synchronous action to reducer flow into an asynchronous flow, which allows us to perform asynchronous API calls from within out action creators. 
+
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+  I don't know that I necessarily have a favorite (yet), only because I don't feel like I have enough experience with any of them yet to make an informed decision. With that said, I can certainly see the place for each different state management system, depending on the type of data being stored in state, and where that data is ultimately needed. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -127,8 +141,8 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request** (https://github.com/kc0buk/web-sprint-challenge-advanced-state-management/pull/1)
+- [x] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete after receiving your pull-request
 
 
